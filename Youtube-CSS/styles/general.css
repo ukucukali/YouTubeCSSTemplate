@@ -1,0 +1,22 @@
+body{
+   margin: 0;
+
+   /* to avoid items to go under the navbar */
+   padding-top: 68px;
+   padding-left: 95px;
+   padding-right: 24px;
+   background-color: rgb(250, 250, 250);
+   font-family: Roboto,Arial;
+}
+
+/* responsive design element */
+@media (max-width:600px) {
+   body{
+      padding-left: 24px;
+   }
+}
+
+
+p{
+   margin: 0;
+}

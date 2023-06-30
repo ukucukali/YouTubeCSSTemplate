@@ -1,0 +1,218 @@
+
+.menu-icon{
+   height: 20px;
+   margin-left: 24px ;
+}
+
+.header{
+height: 55px ;
+
+/* flexbox */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+
+/* position */
+position: fixed;
+
+/* these are used to strech the positioned item */
+top: 0;
+right: 0;
+left: 0;
+
+background-color: white;
+border-bottom: 1px solid rgb(228,228,228) ;
+box-shadow:  1px 2px 3px rgba(0, 0, 0, 0.05);
+
+z-index: 100;
+}
+
+.nav-left-section{
+   /* flexbox */
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.nav-middle-section{ 
+   margin-left: 70px ;
+   margin-right: 35px ;
+   max-width: 500px;
+
+   /* flexbox */
+   display: flex;
+   align-items: center;
+   flex: 1;
+}
+@media (max-width:660px)
+{
+ .search-bar{
+   visibility: hidden;
+ }
+ .search-button{
+   width: 40px !important;
+   padding: 0px !important ;
+   border-radius: 25px !important;
+   border-style: none !important;
+   background-color: white !important;
+ }
+ .voice-search-button{
+   background-color: white !important;
+ }
+ .nav-middle-section{
+   justify-content: end;
+   margin-right: 0;
+ }
+}
+
+
+.nav-right-section{
+   width: 200px;
+   
+   /* flexbox */
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+
+   /* when screen gets smaller it prevents item to get close each other */
+   flex-shrink: 0;
+}
+
+.notifications-icon{
+   height: 24px;
+}
+.notifications-icon-container{
+   position: relative;
+}
+.notifications-count{
+   position: absolute;
+   top:-4px;
+   right: -4px;
+
+
+   background-color: rgb(200, 0, 0);
+   color: white;
+   font-size:10px;
+   font-weight: 500;
+   border-radius: 50%;
+   padding: 2px 5px 2px;
+
+}
+
+
+.search-bar{
+   /* flexbox sizing*/
+   flex: 1;
+
+   height: 36px;
+   padding-left: 10px;
+   font-size: 16px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: rgb(192, 192, 192);
+   border-radius: 2px;
+
+   /* inset takes shadow to inside of the box */
+   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+   width: 0;
+   border-top-left-radius: 40px;
+   border-bottom-left-radius: 40px;
+}
+
+.search-bar::placeholder{
+   font-size: 16px;
+}
+
+.search-button{
+   height: 40px;
+   width: 66px;
+   background-color: rgb(240, 240, 240);
+   border: 1px solid rgb(192, 192, 192);
+   margin-left: -1px;
+   margin-right: 10px;
+
+   /* flexbox */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-top-right-radius: 40px;
+   border-bottom-right-radius: 40px;
+}
+
+.search-button,
+.voice-search-button,
+.upload-icon-container,
+.youtube-app-icon-container,
+.notifications-icon-container{
+   /* position */
+   position: relative;
+
+   /* flexbox */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   cursor: pointer;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-app-icon-container .tooltip,
+.notifications-icon-container .tooltip{
+   /* position */
+   position: absolute;
+   bottom: -30px;
+
+   background-color: gray;
+   color: white;
+   padding: 4px 8px 4px;
+   border-radius: 2px;
+   font-size: 12px;
+
+   opacity: 0;
+   /* to create transition for opacity duration 15ms; */
+   transition: opacity 0.15s;
+   /* to disable hover effect */
+   pointer-events: none;
+   /* disable wrapping */
+   white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-app-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip{
+   opacity: 1;
+
+}
+
+.search-icon{
+   height: 25px;   
+}
+
+.voice-search-icon{
+   height: 24px;
+}
+
+.voice-search-button{
+   height: 40px;
+   width: 40px;
+
+   /* to make rounded corners */
+   border-radius: 50%;
+
+   border: none;
+   background-color: rgb(245, 245, 245);
+}
+
+.upload-icon,
+.youtube-app-icon{
+   height: 24px;
+}
+
+.current-user-icon{
+   height: 32px;
+   border-radius: 50%;
+}
